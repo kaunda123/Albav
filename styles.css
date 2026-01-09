@@ -1,0 +1,239 @@
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      padding-top: 140px;
+    }
+    
+
+    /* ---------- HEADER ---------- */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+    
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 1rem;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* ---------- HERO WITH SCROLLING BACKGROUND ---------- */
+    .hero {
+      height: 100vh;
+      background-image: url('images\\background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero-overlay {
+      background: rgba(0,0,0,0.6);
+      padding: 2rem;
+      border-radius: 8px;
+    }
+
+    .hero h2 {
+      font-size: clamp(1.5rem, 5vw, 3rem);
+    }
+
+    /* ---------- CONTENT SECTION (ENDS BACKGROUND) ---------- */
+    .content {
+      background: #f4f6f8;
+      padding: 5rem 2rem 3rem;
+      margin-top: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      padding: 1rem;
+      margin: auto;
+    }
+
+    /* ---------- SERVICES (ACCORDION STYLE) ---------- */
+    .service {
+      background: #fff;
+      margin-bottom: 1rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .service-header {
+      padding: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .service-header h3 {
+      color: #0a6cf1;
+      font-size: 1.1rem;
+    }
+
+    .service-header span {
+      font-size: 1.4rem;
+      font-weight: bold;
+    }
+
+    .service-summary {
+      color: #555;
+      font-size: 0.9rem;
+    }
+
+    .service-details {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+    
+    .service.active .service-details {
+      max-height: 2000px; /* big enough for all content */
+    }
+    
+
+    /* ---------- CONTACT ---------- */
+    .contact {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    footer {
+      background: #222;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+      }
+
+      header h1 {
+        font-size: 1.4rem;
+      }
+    
+      h4 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+      }
+    
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    
+      nav a {
+        margin: 0.3rem;
+        font-size: 0.85rem;
+      }
+    
+      .logo {
+        width: 120px;
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+
+    
+    .fade-in {
+      width: 100%;
+      max-width: 500px;
+      margin: 1rem auto;
+      display: block;
+    
+    
+    
+      /* Radial fade mask */
+      -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+      -webkit-mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      -webkit-mask-size: cover;
+    
+      mask-image: radial-gradient(circle, rgba(0,0,0,1) 30%, rgba(0,0,0,0) 100%);
+      mask-repeat: no-repeat;
+      mask-position: center;
+      mask-size: cover;
+    
+      /* Make edges blend to white background */
+      background-color: white;
+    }
+    .logo {
+      width: 160px;
+      position: inherit;
+      top: 80px;
+      border-radius: 10px;
+    }
+    h4 {
+      position: inherit;
+      top: 50px;
+      font-size: 15px;
+    }
+    
+    ul.icons {
+      cursor: default;
+      list-style: none;
+      padding-left: 0;
+    }
+  
+      ul.icons li {
+        display: inline-block;
+        padding: 0 1em 0 0;
+      }
+  
+        ul.icons li:last-child {
+          padding-right: 0 !important;
+        }
+  
+        ul.icons li .icon:before {
+          font-size: 1.25em;
+        }
+  
+    
+
